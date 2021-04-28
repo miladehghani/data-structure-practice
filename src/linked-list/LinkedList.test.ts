@@ -6,6 +6,11 @@ describe("general", () => {
     list.fromArray([1, 2, 3, 4]);
     expect(list.toString()).toBe("1,2,3,4");
   });
+  test("to Array should work", () => {
+    const list = new LinkedList();
+    list.fromArray([1, 2, 3, 4]);
+    expect(list.toArray()).toEqual([1, 2, 3, 4]);
+  });
 });
 
 describe("get", () => {
