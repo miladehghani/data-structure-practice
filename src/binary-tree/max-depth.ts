@@ -1,10 +1,10 @@
-import { TreeNode } from "./TreeNode";
+import { BinaryTreeNode } from "./BinaryTreeNode";
 
 let answer = 0;
 
 /** Top Down */
 export function maxDepth_preOrder(
-  root: TreeNode | null,
+  root: BinaryTreeNode | null,
   _depth?: number
 ): number {
   let depth = _depth || 0;
@@ -19,7 +19,7 @@ export function maxDepth_preOrder(
 }
 
 /** Bottom Up */
-export function maxDepth_postOrder(root: TreeNode | null): number {
+export function maxDepth_postOrder(root: BinaryTreeNode | null): number {
   if (root === null) return 0;
   if (root.left === null && root.right === null) return 1; //performance optimization
 

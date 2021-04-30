@@ -1,7 +1,7 @@
-import { TreeNode } from "./TreeNode";
+import { BinaryTreeNode } from "./BinaryTreeNode";
 
 export function levelorderTraversal(
-  root: TreeNode | null,
+  root: BinaryTreeNode | null,
   _level?: number,
   _traversed?: number[][]
 ): number[][] {
@@ -18,7 +18,7 @@ export function levelorderTraversal(
   return traversed;
 }
 
-function levelOrder(root: TreeNode | null): number[][] {
+function levelOrder(root: BinaryTreeNode | null): number[][] {
   if (root === null) return [];
 
   const result: number[][] = [];

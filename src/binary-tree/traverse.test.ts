@@ -1,18 +1,18 @@
-import { TreeNode } from "./TreeNode";
+import { BinaryTreeNode } from "./BinaryTreeNode";
 import { preorderTraversal } from "./pre-order";
 import { inorderTraversal } from "./in-order";
 import { postorderTraversal } from "./post-order";
 import { levelorderTraversal } from "./level-order";
 import { isSymmetric } from "./is-symmetric";
 
-const tree = new TreeNode(
+const tree = new BinaryTreeNode(
   5,
-  new TreeNode(
+  new BinaryTreeNode(
     6,
-    new TreeNode(2, new TreeNode(8), new TreeNode(7)),
-    new TreeNode(4)
+    new BinaryTreeNode(2, new BinaryTreeNode(8), new BinaryTreeNode(7)),
+    new BinaryTreeNode(4)
   ),
-  new TreeNode(3, new TreeNode(2), new TreeNode(1))
+  new BinaryTreeNode(3, new BinaryTreeNode(2), new BinaryTreeNode(1))
 );
 
 describe("pre-order", () => {
@@ -46,10 +46,10 @@ describe("level-order", () => {
 
 describe("is-symetric", () => {
   test("should return true for [1,2,2,3,4,4,3]", () => {
-    const tree = new TreeNode(
+    const tree = new BinaryTreeNode(
       1,
-      new TreeNode(2, new TreeNode(3), new TreeNode(4)),
-      new TreeNode(2, new TreeNode(4), new TreeNode(3))
+      new BinaryTreeNode(2, new BinaryTreeNode(3), new BinaryTreeNode(4)),
+      new BinaryTreeNode(2, new BinaryTreeNode(4), new BinaryTreeNode(3))
     );
     expect(isSymmetric(tree)).toBeTruthy();
   });

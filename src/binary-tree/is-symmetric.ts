@@ -1,11 +1,14 @@
 import { preorderTraversal } from "./pre-order";
-import { TreeNode } from "./TreeNode";
+import { BinaryTreeNode } from "./BinaryTreeNode";
 
-export function isSymmetric(root: TreeNode): boolean {
+export function isSymmetric(root: BinaryTreeNode): boolean {
   return isMirror(root, root);
 }
 
-function isMirror(t1: TreeNode | null, t2: TreeNode | null): boolean {
+function isMirror(
+  t1: BinaryTreeNode | null,
+  t2: BinaryTreeNode | null
+): boolean {
   if (t1 == null && t2 == null) return true;
   if (t1 == null || t2 == null) return false;
 
@@ -16,14 +19,14 @@ function isMirror(t1: TreeNode | null, t2: TreeNode | null): boolean {
   );
 }
 /*Iterative*/
-export function isSymmetric_Iterative(root: TreeNode) {
+export function isSymmetric_Iterative(root: BinaryTreeNode) {
   let queue = [];
   queue.push(root);
   queue.push(root);
 
   while (queue.length) {
-    let t1: TreeNode | null | undefined = queue.shift();
-    let t2: TreeNode | null | undefined = queue.shift();
+    let t1: BinaryTreeNode | null | undefined = queue.shift();
+    let t2: BinaryTreeNode | null | undefined = queue.shift();
 
     if (!t1 && !t2) continue;
     if (!t1 || !t2) return false;

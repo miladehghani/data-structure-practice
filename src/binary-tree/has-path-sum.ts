@@ -1,6 +1,9 @@
-import { TreeNode } from "./TreeNode";
+import { BinaryTreeNode } from "./BinaryTreeNode";
 
-export function hasPathSum(root: TreeNode | null, targetSum: number): boolean {
+export function hasPathSum(
+  root: BinaryTreeNode | null,
+  targetSum: number
+): boolean {
   if (!root) return false;
 
   targetSum -= root.val;

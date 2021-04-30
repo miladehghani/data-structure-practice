@@ -1,7 +1,7 @@
-import { TreeNode } from "./TreeNode";
+import { BinaryTreeNode } from "./BinaryTreeNode";
 
 export function preorderTraversal(
-  root: TreeNode | null,
+  root: BinaryTreeNode | null,
   traversed: number[] = []
 ): number[] {
   if (!root) return traversed;

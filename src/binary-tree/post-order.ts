@@ -1,7 +1,7 @@
-import { TreeNode } from "./TreeNode";
+import { BinaryTreeNode } from "./BinaryTreeNode";
 
 export function postorderTraversal(
-  root: TreeNode | null,
+  root: BinaryTreeNode | null,
   _traversed?: number[]
 ): number[] {
   let traversed = _traversed || [];
