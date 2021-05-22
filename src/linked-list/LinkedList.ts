@@ -212,6 +212,16 @@ export class LinkedList {
     return prev;
   }
 
+  static switchNodesInPair(head?: LinkedList) {
+    if (!head && !head.next) {
+      const next = head.next;
+      head.next = switchNodesInPair(next.next);
+      next.next = head;
+      return next;
+    }
+    return head;
+  }
+
   fromArray(numbers: number[]) {
     let cursor: LinkedList = this;
 
